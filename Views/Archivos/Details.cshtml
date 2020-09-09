@@ -1,0 +1,42 @@
+﻿@model editeca.Models.Archivos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Archivos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Rutas.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rutas.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiposArchivo.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiposArchivo.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Orden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Orden)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

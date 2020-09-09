@@ -11,107 +11,112 @@ using editeca.Models;
 
 namespace editeca.Controllers
 {
-    public class RutasController : Controller
+    public class MidesController : Controller
     {
         private ModelRutoteca db = new ModelRutoteca();
 
-        // GET: Rutas
+        // GET: Mides
         public async Task<ActionResult> Index()
         {
-            return View(await db.Rutas.ToListAsync());
+            var mides = db.Mides.Include(m => m.Rutas);
+            return View(await mides.ToListAsync());
         }
 
-        // GET: Rutas/Details/5
+        // GET: Mides/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Rutas rutas = await db.Rutas.FindAsync(id);
-            if (rutas == null)
+            Mides mides = await db.Mides.FindAsync(id);
+            if (mides == null)
             {
                 return HttpNotFound();
             }
-            return View(rutas);
+            return View(mides);
         }
 
-        // GET: Rutas/Create
+        // GET: Mides/Create
         public ActionResult Create()
         {
+            ViewBag.IdRuta = new SelectList(db.Rutas, "Id", "Codigo");
             return View();
         }
 
-        // POST: Rutas/Create
+        // POST: Mides/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,IdElemento,Codigo,Nombre,Longitud,Dificultad,Duración,Bicicleta,Caballo,Acceso,Descripcion,Nota,Informacion,Cartografia,IBP,Circular")] Rutas rutas)
+        public async Task<ActionResult> Create([Bind(Include = "Id,IdRuta,Medio,Itinerario,Desplazamiento,Esfuerzo,Origen")] Mides mides)
         {
             if (ModelState.IsValid)
             {
-                db.Rutas.Add(rutas);
+                db.Mides.Add(mides);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(rutas);
+            ViewBag.IdRuta = new SelectList(db.Rutas, "Id", "Codigo", mides.IdRuta);
+            return View(mides);
         }
 
-        // GET: Rutas/Edit/5
+        // GET: Mides/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Rutas rutas = await db.Rutas.FindAsync(id);
-            if (rutas == null)
+            Mides mides = await db.Mides.FindAsync(id);
+            if (mides == null)
             {
                 return HttpNotFound();
             }
-            return View(rutas);
+            ViewBag.IdRuta = new SelectList(db.Rutas, "Id", "Codigo", mides.IdRuta);
+            return View(mides);
         }
 
-        // POST: Rutas/Edit/5
+        // POST: Mides/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,IdElemento,Codigo,Nombre,Longitud,Dificultad,Duración,Bicicleta,Caballo,Acceso,Descripcion,Nota,Informacion,Cartografia,IBP,Circular")] Rutas rutas)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,IdRuta,Medio,Itinerario,Desplazamiento,Esfuerzo,Origen")] Mides mides)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(rutas).State = EntityState.Modified;
+                db.Entry(mides).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(rutas);
+            ViewBag.IdRuta = new SelectList(db.Rutas, "Id", "Codigo", mides.IdRuta);
+            return View(mides);
         }
 
-        // GET: Rutas/Delete/5
+        // GET: Mides/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Rutas rutas = await db.Rutas.FindAsync(id);
-            if (rutas == null)
+            Mides mides = await db.Mides.FindAsync(id);
+            if (mides == null)
             {
                 return HttpNotFound();
             }
-            return View(rutas);
+            return View(mides);
         }
 
-        // POST: Rutas/Delete/5
+        // POST: Mides/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Rutas rutas = await db.Rutas.FindAsync(id);
-            db.Rutas.Remove(rutas);
+            Mides mides = await db.Mides.FindAsync(id);
+            db.Mides.Remove(mides);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

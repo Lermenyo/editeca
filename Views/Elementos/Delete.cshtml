@@ -1,0 +1,88 @@
+﻿@model editeca.Models.Elementos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Elementos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Elementos_Imagen.Extension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elementos_Imagen.Extension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiposElemento.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiposElemento.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Icono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Icono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Permalink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Permalink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripcionCorta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescripcionCorta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Create)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Create)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImportanciaIntrinseca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImportanciaIntrinseca)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

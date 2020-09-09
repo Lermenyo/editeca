@@ -277,5 +277,6 @@ namespace editeca.Models
                 .Property(e => e.VotacionMedia)
                 .HasPrecision(18, 0);
         }
+
     }
 }

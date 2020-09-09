@@ -1,0 +1,63 @@
+﻿@model IEnumerable<editeca.Models.ElementosRuta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Elementos.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rutas.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Intermedia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orden)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Elementos.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rutas.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Intermedia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Orden)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

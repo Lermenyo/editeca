@@ -1,0 +1,106 @@
+﻿@model editeca.Models.Localidades
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Localidades</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Elementos.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elementos.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Habitantes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Habitantes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCapital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCapital)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreOrigen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreOrigen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoINESuperior)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoINESuperior)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoINE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoINE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdREL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdREL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Superficie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Superficie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Perimetro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Perimetro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoHojaMTN25)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoHojaMTN25)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

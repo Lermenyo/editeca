@@ -96,12 +96,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArchivosController.cs" />
+    <Compile Include="Controllers\ElementosController.cs" />
+    <Compile Include="Controllers\ElementosRutasController.cs" />
+    <Compile Include="Controllers\LocalidadesController.cs" />
+    <Compile Include="Controllers\MidesController.cs" />
     <Compile Include="Controllers\RutasController.cs" />
+    <Compile Include="Controllers\TracksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -130,13 +163,51 @@
     <Compile Include="Models\TiposArchivo.cs" />
     <Compile Include="Models\TiposElemento.cs" />
     <Compile Include="Models\Tracks.cs" />
-    <Compile Include="Models\ViewModel\RutaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\gpx\gpxfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Rutas\Create.cshtml" />
+    <Content Include="Views\Rutas\Delete.cshtml" />
+    <Content Include="Views\Rutas\Details.cshtml" />
+    <Content Include="Views\Rutas\Edit.cshtml" />
+    <Content Include="Views\Rutas\Index.cshtml" />
+    <Content Include="Views\Mides\Create.cshtml" />
+    <Content Include="Views\Mides\Delete.cshtml" />
+    <Content Include="Views\Mides\Details.cshtml" />
+    <Content Include="Views\Mides\Edit.cshtml" />
+    <Content Include="Views\Mides\Index.cshtml" />
+    <Content Include="Views\Localidades\Create.cshtml" />
+    <Content Include="Views\Localidades\Delete.cshtml" />
+    <Content Include="Views\Localidades\Details.cshtml" />
+    <Content Include="Views\Localidades\Edit.cshtml" />
+    <Content Include="Views\Localidades\Index.cshtml" />
+    <Content Include="Views\Elementos\Create.cshtml" />
+    <Content Include="Views\Elementos\Delete.cshtml" />
+    <Content Include="Views\Elementos\Details.cshtml" />
+    <Content Include="Views\Elementos\Edit.cshtml" />
+    <Content Include="Views\Elementos\Index.cshtml" />
+    <Content Include="Views\ElementosRutas\Create.cshtml" />
+    <Content Include="Views\ElementosRutas\Delete.cshtml" />
+    <Content Include="Views\ElementosRutas\Details.cshtml" />
+    <Content Include="Views\ElementosRutas\Edit.cshtml" />
+    <Content Include="Views\ElementosRutas\Index.cshtml" />
+    <Content Include="Views\Tracks\Create.cshtml" />
+    <Content Include="Views\Tracks\Delete.cshtml" />
+    <Content Include="Views\Tracks\Details.cshtml" />
+    <Content Include="Views\Tracks\Edit.cshtml" />
+    <Content Include="Views\Tracks\Index.cshtml" />
+    <Content Include="Views\Archivos\Create.cshtml" />
+    <Content Include="Views\Archivos\Delete.cshtml" />
+    <Content Include="Views\Archivos\Details.cshtml" />
+    <Content Include="Views\Archivos\Edit.cshtml" />
+    <Content Include="Views\Archivos\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,7 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Rutas\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

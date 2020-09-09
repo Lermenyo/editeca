@@ -1,0 +1,138 @@
+﻿@model editeca.Models.Rutas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rutas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdElemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdElemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dificultad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dificultad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duración)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duración)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bicicleta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bicicleta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Caballo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caballo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Acceso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acceso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Informacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Informacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cartografia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cartografia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IBP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IBP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Circular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Circular)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
